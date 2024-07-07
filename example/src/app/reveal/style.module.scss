@@ -1,0 +1,13 @@
+.revealPage {
+  .exportBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  >section {
+    width: 100%;
+    height: 100%;
+  }
+}
