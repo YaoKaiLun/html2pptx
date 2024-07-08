@@ -9,5 +9,14 @@
 ```
 import { html2pptx } from 'html2pptx';
 
-const zipFile = await html2pptx([slideDom1, slideDom2]);
+const slideDoms = presentationRef.current.querySelectorAll<HTMLElement>('.pdf-page');
+await html2pptx(
+  presentationRef.current,
+  Array.from(slideDoms),
+  {
+    width: SLIDE_WIDTH,
+    height: SLIDE_HEIGHT,
+    fileName: 'reveal-export'
+  },
+);
 ```

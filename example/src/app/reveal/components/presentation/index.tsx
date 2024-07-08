@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Reveal from 'reveal.js';
 import { SLIDE_HEIGHT, SLIDE_WIDTH } from '@/app/constants';
+import Image from 'next/image';
+import windowsIcon from '../../../../assets/images/256x256.png';
 import style from './style.module.scss';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/black.css';
@@ -45,7 +47,12 @@ export default function Presentation() {
           </section>
           <section className="slide" data-background-color="rgb(70, 70, 255)">
             <h2>Slide 2</h2>
-            <h3>🍰</h3>
+            <Image
+              src={windowsIcon}
+              width={160}
+              height={160}
+              alt="windows icon"
+            />
           </section>
         </div>
       </div>

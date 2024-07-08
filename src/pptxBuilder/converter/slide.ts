@@ -196,6 +196,7 @@ export default class SlideConverter {
         type: 'text',
         text,
         ...bounds,
+        width: Math.ceil(bounds.width) + 16, // hack
         color: color2ColorObj(styles.color).hex,
         fontSize: styles.fontSize.number,
         bold: styles.fontWeight > 400,
